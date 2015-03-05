@@ -15,11 +15,24 @@ Yeoman generator that scaffolds a JS library.
     │
     ├── doc (the API documentation)
     │
-    └── examples (your library examples)
+    ├── examples (your library examples)
+    │
+    ├── bower.json (front end dependencies)
+    │
+    ├── package.json (package publication and build system dependencies)
+    │
+    ├── .gitignore (files that git omits)
+    │
+    ├── editorconfig (coding style rules)
+    │
+    ├── .bowerrc (directory where bower installs dependencies)
+    │
+    └── .jshintrc (file for jshint to enfore coding style rules)
 ```
 
 * It uses browserify for script concatenation
 * It generates bower.json and package.json files for publication and dependedency management
+* It uses gulp as build system
 
 ## Getting Started
 
