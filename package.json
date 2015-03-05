@@ -1,0 +1,24 @@
+{
+  "name": "generator-jslib",
+  "version": "0.0.0",
+  "description": "It creates a folder structure for a JS library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://dmarcos.github.io/generator-jslib"
+  },
+  "keywords": [
+    "JS",
+    "library",
+    "generator"
+  ],
+  "author": "Diego Marcos Segura <diego.marcos@gmail.com> (http://www.chasingthebeam.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "yeoman-generator": "^0.18.10"
+  }
+}
