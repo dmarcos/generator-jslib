@@ -83,6 +83,7 @@ module.exports = yeoman.generators.Base.extend({
       this.mkdir('src');
       this.mkdir('build');
       this.mkdir('test');
+      this.mkdir('doc');
       this.mkdir('examples');
       this.copy('example.html', 'examples/index.html');
       this.copy('main.js', 'src/main.js');
