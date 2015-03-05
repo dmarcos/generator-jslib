@@ -1,5 +1,5 @@
 {
-  "name": "generator-jslib",
+  "name": "generator-jslibrary",
   "version": "0.0.0",
   "description": "It creates a folder structure for a JS library",
   "main": "index.js",
