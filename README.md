@@ -6,14 +6,10 @@ Yeoman generator that scaffolds a JS library.
 
 |-- src (the sources of your library)
 |    |-- main.js (the main file of your library)
-|
 |-- build (all the sources concatenated ready for distribution)
 |    |-- lib-name.js
-|
 |-- test (the code of your tests)
-|
 |-- doc (the API documentation)
-|
 |-- examples (your library examples)
 
 * It uses browserify for script concatenation
