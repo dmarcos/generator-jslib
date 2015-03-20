@@ -13,7 +13,8 @@
   "keywords": [
     "JS",
     "library",
-    "generator"
+    "generator",
+    "yeoman-generator"
   ],
   "author": "Diego Marcos Segura <diego.marcos@gmail.com> (http://www.chasingthebeam.com/)",
   "license": "MIT",
