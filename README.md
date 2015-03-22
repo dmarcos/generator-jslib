@@ -12,7 +12,7 @@ JSLib Generator
     ├── build (all your scripts concatenated ready for distribution)
     │   └── lib-name.js
     │
-    ├── deps (your library 3rd party dependencies)
+    ├── deps (your non bower non npm library 3rd party dependencies)
     │
     ├── test (the code of your tests)
     │
