@@ -1,4 +1,5 @@
-# JSLib Generator
+JSLib Generator
+==================================================
 
 [Yeoman](http://yeoman.io) generator that scaffolds a JS library.
 
@@ -10,6 +11,8 @@
     │
     ├── build (all your scripts concatenated ready for distribution)
     │   └── lib-name.js
+    │
+    ├── deps (your library 3rd party dependencies)
     │
     ├── test (the code of your tests)
     │
@@ -34,7 +37,8 @@
 * It generates bower.json and package.json files for publication and dependedency management
 * It uses [gulp](http://gulpjs.com/) as build system
 
-## Getting Started
+Getting Started
+--------------------------------------
 
 - Install dependencies: `npm install --global yo bower`
 - Install the generator: `npm install --global generator-jslibrary`
