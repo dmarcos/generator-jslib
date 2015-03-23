@@ -1,32 +1,31 @@
 var gulp = require('gulp');
 var gulpif = require('gulp-if');
 var clean = require('gulp-clean');
+var order = require('gulp-order');
 var rename = require('gulp-rename');
+var concat = require('gulp-concat');
 var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
 var stylish = require('jshint-stylish');
 var livereload = require('gulp-livereload');
-var browserify = require('gulp-browserify');
+var sourcemaps = require('gulp-sourcemaps');
 var flags = require('minimist')(process.argv.slice(2));
 
 // Gulp command line arguments
-var production = flags.production || flags.prod || false;
+var production = flags.production || false;
+var debug = flags.debug || !production;
 var watch = flags.watch;
 
-// Basic usage
 gulp.task('build',  ['clean'], function() {
   // Single entry point to browserify
-  gulp.src('src/main.js')
-      .pipe(browserify({
-        insertGlobals : false, // Introduces all the node modules shims
-        debug : !production, // Creates source maps if debug === true, gulp --production
-      }))
+  gulp.src(['src/*.js', 'vendor/*.js'])
+      .pipe(order([ // The order of concatenation
+        'src/main.js'
+      ], {base: '.'}))
+      .pipe(gulpif(debug, sourcemaps.init()))
       .pipe(gulpif(production, uglify()))
-      .pipe(rename({
-        dirname: './',
-        basename: 'xboxpad',
-        extname: '.js'
-      }))
+      .pipe(concat('<%= appname %>.js'))
+      .pipe(gulpif(debug, sourcemaps.write()))
       .pipe(gulp.dest('./build/'))
       .pipe(gulpif(watch, livereload()));
 });

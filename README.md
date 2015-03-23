@@ -33,7 +33,6 @@ JSLib Generator
     └── .jshintrc (file for jshint to enfore coding style rules)
 ```
 
-* It uses [browserify](http://browserify.org/) for script concatenation
 * It generates bower.json and package.json files for publication and dependedency management
 * It uses [gulp](http://gulpjs.com/) as build system
 
